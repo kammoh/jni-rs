@@ -66,6 +66,9 @@ pub enum Error {
         #[source]
         source: CharTryFromError,
     },
+
+    #[error("JNI >= 1.2 for ExceptionCheck API")]
+    UnsupportedVersion,
 }
 
 #[derive(Debug, Error)]
