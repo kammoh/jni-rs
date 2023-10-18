@@ -501,7 +501,7 @@ macro_rules! test_auto_array_read_write {
             let buf: &[$jni_type] = &[$value_a as $jni_type, $value_b as $jni_type];
             let java_array = env
                 .$new_array(2)
-                .expect(stringify!(JNIEnv#$new_array must create a Java $jni_type array with given size));
+                .expect(stringify!(JNIEnv #$new_array must create a Java $jni_type array with given size));
 
             // Insert array elements
             let _ = env.$set_array(&java_array, 0, buf);
